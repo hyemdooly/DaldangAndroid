@@ -12,7 +12,7 @@ data class LocationDTO(val documents: MutableList<ItemDocuments>)
 interface KakaoRetrofitService {
 
     @Headers(
-        "Authorization: "
+        "Authorization: KakaoAK " // input token
     )
     @GET("/v2/local/search/address.json")
     fun searchLocation(@Query("query") query: String): Call<LocationDTO>

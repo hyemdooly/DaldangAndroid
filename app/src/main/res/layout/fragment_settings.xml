@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:elevation="5dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4sp"
+            android:fontFamily="@font/dreamm"
+            android:layout_gravity="center_horizontal" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/img_user_profile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/back_round_stroke_rectangle"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_user_profile"
+        app:layout_constraintLeft_toRightOf="@id/img_user_profile"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/dreamb"
+        android:text="김수원"
+        android:textSize="24sp"
+        android:textColor="#de000000"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="0sp" />
+
+    <TextView
+        android:id="@+id/text_user_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreamm"
+        android:text="경북 문경시 문경읍"
+        android:textSize="12sp"
+        android:textColor="#707070"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="4sp"
+        app:layout_constraintTop_toBottomOf="@id/text_user_name"
+        app:layout_constraintLeft_toLeftOf="@id/text_user_name"
+        android:layout_marginTop="9dp" />
+
+    <FrameLayout
+        android:id="@+id/layout_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#F1F1F1"
+        app:layout_constraintTop_toBottomOf="@id/img_user_profile"
+        android:layout_marginTop="28dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />d
+
+    <FrameLayout
+        android:id="@+id/btn_my_subscribe_service"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_line"
+        android:layout_marginTop="28dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dreamb"
+            android:textSize="16sp"
+            android:textColor="#de000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/my_subscribe_service"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/btn_policy"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_my_subscribe_service"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dreamb"
+            android:textSize="16sp"
+            android:textColor="#de000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/policy"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_policy"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dreamb"
+            android:textSize="16sp"
+            android:textColor="#de000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/logout"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp" />
+    </FrameLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

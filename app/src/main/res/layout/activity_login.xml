@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="24dp"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="24dp"
+        android:orientation="vertical" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:elevation="5dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textSize="20sp"
+                android:textColor="#de000000"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="4sp"
+                android:fontFamily="@font/dreamm"
+                android:layout_gravity="center_horizontal" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/id"
+        android:fontFamily="@font/dreaml"
+        android:textSize="16sp"
+        android:textColorHint="#dbdbdb"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="1"
+        android:layout_marginTop="87dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right" />
+
+    <EditText
+        android:id="@+id/edit_pw"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:hint="@string/pw"
+        android:fontFamily="@font/dreaml"
+        android:textSize="16sp"
+        android:textColorHint="#dbdbdb"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_id"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="105dp"
+        android:layout_height="47dp"
+        android:background="@drawable/back_round_rectangle"
+        android:backgroundTint="@android:color/white"
+        android:text="@string/login"
+        android:fontFamily="@font/dreamm"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_pw"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/ripple_round_rectangle"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/dreamm"
+        android:text="@string/normal_sign_up"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="6sp"
+        android:gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

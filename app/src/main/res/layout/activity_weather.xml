@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.WeatherActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="24dp"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="24dp"
+        android:orientation="vertical" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:elevation="5dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weather"
+            android:textSize="20sp"
+            android:textColor="#de000000"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="4sp"
+            android:fontFamily="@font/dreamm"
+            android:layout_gravity="center_horizontal" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreamb"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="0sp"
+        android:text="경북 문경시"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:id="@+id/text_rain_percent_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_area"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        android:text="비 올 확률 : 70%"
+        android:fontFamily="@font/dreaml"
+        android:textSize="12sp"
+        android:textColor="#707070"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="4sp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/text_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreamm"
+        android:textSize="16sp"
+        android:textColor="#fc594c"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        app:layout_constraintTop_toBottomOf="@id/text_rain_percent_main"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/text_current_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreamb"
+        android:textSize="70sp"
+        android:textColor="#fc594c"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="-40sp"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toTopOf="@id/text_comment"
+        app:layout_constraintRight_toLeftOf="@id/guide_right" />
+
+    <TextView
+        android:id="@+id/text_max_min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreamm"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp"
+        app:layout_constraintTop_toBottomOf="@id/text_current_temp"
+        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        android:layout_marginTop="14dp"
+        />
+
+    <TextView
+        android:id="@+id/text_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_max_min_temp"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        android:fontFamily="@font/dreamm"
+        android:text="월요일"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:letterSpacing="0.01"
+        android:lineSpacingExtra="8sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dreaml"
+        android:text="오늘"
+        android:textSize="12sp"
+        android:textColor="#707070"
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="4sp"
+        app:layout_constraintBottom_toBottomOf="@id/text_day_of_week"
+        app:layout_constraintLeft_toRightOf="@id/text_day_of_week"
+        android:layout_marginLeft="10dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_time_weather"
+        android:layout_width="0dp"
+        android:layout_height="118dp"
+        android:background="@drawable/back_round_stroke_rectangle"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        app:layout_constraintTop_toBottomOf="@id/text_day_of_week"
+        android:layout_marginTop="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_hour_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/guide_left"
+        app:layout_constraintRight_toLeftOf="@id/guide_right"
+        app:layout_constraintTop_toBottomOf="@id/layout_time_weather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="11dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_day_weather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@color/colorPrimary"
+            android:scrollbarSize="3dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

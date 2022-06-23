@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/container_date_n_brix"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/back_chart_marker_rectangle"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dreaml"
+                android:text="2019.09.18"
+                android:textSize="10sp"
+                android:textColor="#707070"
+                android:letterSpacing="0.15"
+                android:lineSpacingExtra="6sp" />
+
+            <TextView
+                android:id="@+id/text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dreamm"
+                android:text="90000원"
+                android:textSize="14sp"
+                android:textColor="#de000000"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="6sp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

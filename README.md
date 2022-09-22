@@ -1,6 +1,8 @@
 # DaldangAndroid
  SW마에스트로 10기 'Feliz'팀 프로젝트
 
+사과 이미지 촬영으로 사과의 당도를 측정할 수 있도록 하는 서비스입니다.
+
 서버를 닫았고 Token값을 모두 지워 앱이 제대로 작동하지 않을 수 있습니다.
 
 ![시퀀스 01 00_00_26_24 스틸 010](https://user-images.githubusercontent.com/15646373/191761916-0fd5ba3d-85a8-4db0-acf8-e74522fe1402.jpg)
